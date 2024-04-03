@@ -1,0 +1,116 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Feel free to change the font */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333; /* Dark background for the header */
+    color: white;
+}
+
+.logo-container h1 {
+    font-size: 2em; /* Large font size for the logo */
+    color: black; /* Logo color */
+}
+
+/* Navigation Bar */
+nav .nav-list {
+    list-style-type: none;
+    display: flex;
+}
+
+nav .nav-list li {
+    padding: 0 20px;
+}
+
+nav .nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav .nav-list li .cta-button {
+    padding: 10px 20px;
+    background-color: #f80; /* Bright color for the call-to-action button */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav .nav-list li .cta-button:hover {
+    background-color: #e69a00; /* Darken button on hover */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    background-color: #1a1a1a; /* Dark background for contrast */
+}
+
+.hero-text {
+    flex-basis: 50%;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-text .cta-button {
+    font-size: 1em;
+    padding: 15px 30px;
+}
+
+.hero-image {
+    flex-basis: 50%;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header, .hero {
+        flex-direction: column;
+    }
+
+    .hero-text, .hero-image {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    nav .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-list li {
+        padding: 10px 0;
+    }
+}
